@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>A-Frame AR Camera - Move component</title>
+    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script> 
+    <script src="../../libs/browser-cuid.js"></script>
+    <script src="../../libs/lodash.core.min.js"></script>
+    <script src="../../libs/aframe-video-billboard.js"></script>
+    <script src="../../libs/aframe-frustum-lock.js"></script>
+    <script src="../../libs/cv.js"></script>
+    <script src="../../libs/aruco.js"></script>
+    <script>
+      registerAframeVideoBillboard(window.AFRAME);
+      aframeFrustumLockComponent(window.AFRAME);
+    </script>
+    <script src="../../dist/build.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <a-box id="box" position="1 0.75 -4" rotation="0 0 0" radius="0.5" height="1.5" color="#FFC65D"></a-box>
+
+
+      <a-camera>
+        <a-video-billboard
+          rotation="0 180 0"
+          material="side:double"
+          frustum-lock="widthProperty: video-billboard.minWidth; heightProperty: video-billboard.minHeight; depth: 10;"
+          ar-camera="elid: box"/>
+      </a-camera>
+    </a-scene>
+
+  </body>
+</html>

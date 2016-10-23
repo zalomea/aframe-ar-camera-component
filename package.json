@@ -1,0 +1,23 @@
+{
+  "name": "aframe-ar-camera",
+  "version": "0.0.1",
+  "description": "Aframe component to detect Aruco markers with your camera.",
+  "main": "src/index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "uglify": "mkdir -p dist && uglifyjs src/*.js -m -o dist/build.js && uglifyjs src/*.js -m -c -o dist/build.min.js",
+    "build": "npm run uglify",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zalomea/aframe-ar-camera-component.git"
+  },
+  "author": "Gonzalo Mendez",
+  "license": "MIT",
+  "devDependencies": {
+    "uglifyjs" : "~2.4.0",
+  }
+}

@@ -1,2 +1,2 @@
-# aframe-ar-camera-component
-Detect Aruco markers with your camera.
+# Aframe AR Camera Component
+Aframe component to detect Aruco markers with your camera.
