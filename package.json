@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "uglify": "mkdir -p dist && uglifyjs src/*.js -m -o dist/build.js && uglifyjs src/*.js -m -c -o dist/build.min.js",
-    "build": "npm run uglify",
+    "build": "npm run uglify"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,6 @@
   "author": "Gonzalo Mendez",
   "license": "MIT",
   "devDependencies": {
-    "uglifyjs" : "~2.4.0",
+    "uglifyjs" : "~2.4.0"
   }
 }
