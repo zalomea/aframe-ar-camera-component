@@ -72,7 +72,8 @@ AFRAME.registerComponent('ar-camera', {
         z_rot = 180*calcAngle(getPoints(line_final)[0],getPoints(line_final)[1])/Math.PI;
         x_rot = 180*Math.atan((line_near_size-calcSize(line_side1))/line_near_size)/Math.PI;
         // Distance correction
-        x_rot = x_rot + 180*Math.atan(y_final/z_final)/Math.PI;
+        //x_rot = x_rot + 180*Math.atan(y_final/z_final)/Math.PI;
+        y_rot = -180*Math.atan(x_final/z_final)/Math.PI;
 
         // Set position and rotation values
         var pos = window.ARcamera.el_obj.getAttribute('position');
@@ -82,6 +83,7 @@ AFRAME.registerComponent('ar-camera', {
         pos.z = -z_final;
 
         rot.x = -x_rot;
+        rot.y = -y_rot;
         rot.z = z_rot;
 
 
