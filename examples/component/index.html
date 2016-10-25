@@ -6,6 +6,7 @@
     <script src="../../libs/lodash.core.min.js"></script>
     <script src="../../libs/aframe-video-billboard.js"></script>
     <script src="../../libs/aframe-frustum-lock.js"></script>
+    <script src="../../libs/aframe-interpolate-component.js"></script>
     <script src="../../libs/cv.js"></script>
     <script src="../../libs/aruco.js"></script>
     <script>
@@ -17,7 +18,7 @@
   <body>
     <a-scene>
 
-      <a-box id="box" position="1 0.75 -4" rotation="0 0 0" radius="0.5" height="1.5" color="#FFC65D"></a-box>
+      <a-box id="box" interpolation="duration:25" position="1 0.75 -4" rotation="0 0 0" radius="0.5" height="1.5" color="#FFC65D"></a-box>
 
 
       <a-camera>
